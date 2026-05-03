@@ -50,3 +50,20 @@ ol {
 ol li {
     margin-bottom: 12px;
 }
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark .card {
+    background: #1e1e1e;
+    border-color: #444;
+}
+
+body.dark h2 {
+    color: #7ab7ff;
+}
+
+body.dark hr {
+    border-color: #444;
+}
