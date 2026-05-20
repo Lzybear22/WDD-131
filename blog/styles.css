@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 1rem 0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.gold-line {
+    border: none;
+    border-top: 1px solid #c9963a;
+    margin: 0.4rem 0;
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0.3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: #8b0000;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+#book-list {
+    padding: 0 1rem;
+}
+
+.book {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.book-meta {
+    text-align: right;
+}
+
+.book-meta p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.book h2 {
+    color: #8b0000;
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+}
+
+.book img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    border-top: 1px solid #c9963a;
+    text-align: center;
+    padding: 0.75rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+
+    .main-nav {
+        justify-content: flex-end;
+    }
+
+    .book {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+    }
+
+    .book-meta {
+        grid-row: 1 / 5;
+        grid-column: 1 / 2;
+        padding-right: 0.5rem;
+        border-right: 1px solid #ddd;
+    }
+
+    .book img {
+        max-width: 160px;
+        margin: 0;
+    }
+}
