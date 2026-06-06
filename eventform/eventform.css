@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #b0c4d8;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 780px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 14px;
+  padding: 32px 36px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.full {
+  grid-column: 1 / 3;
+}
+
+label {
+  font-size: 15px;
+}
+
+input,
+select {
+  padding: 9px 10px;
+  font: inherit;
+  font-size: 15px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background: white;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  border-color: #3b82f6;
+}
+
+#conditionalField[hidden] {
+  display: none;
+}
+
+button {
+  padding: 12px;
+  font: inherit;
+  font-size: 15px;
+  background: #b0c4d8;
+  border: 2px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+button:hover {
+  background: #c5d5e5;
+}
+
+#errors {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #b91c1c;
+}
+
+#errors p {
+  margin: 2px 0;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+#output h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+#output p {
+  margin: 4px 0;
+  font-size: 15px;
+}
