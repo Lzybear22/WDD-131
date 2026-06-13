@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="A RPG character card made with JavaScript.">
+    <meta property="og:url" content="https://example.com/charactercard/">
+    <meta property="og:image" content="https://example.com/charactercard/images/preview.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="A RPG character card made with JavaScript.">
+    <meta name="twitter:image" content="https://example.com/charactercard/images/preview.png">
+
+<link rel="icon" href="images/favicon_io/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <img class="image" id="charImage" src="images/snortleblat.webp" alt="Character portrait">
+        <div class="name" id="charName"></div>
+        <div class="stats">
+            <p id="charClass"></p>
+            <p id="charLevel"></p>
+            <p id="charHealth"></p>
+        </div>
+        <div class="buttons">
+            <button id="attackBtn">Attack</button>
+            <button id="levelUpBtn">Level Up</button>
+        </div>
+    </div>
+</body>
+</html>
