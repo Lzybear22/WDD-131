@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CineList is a movie watchlist app for tracking movies you want to watch, marking them watched, and filtering by genre.">
+  <title>CineList | Movie Watchlist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>CineList</h1>
+      <p>My personal movie watchlist</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <img class="hero-image" src="images/popcorn.webp" alt="popcorn" loading="eager" fetchpriority="high">
+
+      <div class="hero-text">
+        <h2>Track your movie journey</h2>
+        <p>Add movies you want to watch, mark them off when you finish, and filter your list by genre.</p>
+        <button id="startButton" type="button">View watchlist</button>
+      </div>
+    </section>
+
+    <section class="add-movie" aria-labelledby="addMovieHeading">
+      <h2 id="addMovieHeading">Add a movie</h2>
+
+      <form id="movieForm" novalidate>
+        <div class="field">
+          <label for="titleInput">Title</label>
+          <input type="text" id="titleInput" name="title" required maxlength="60" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="genreInput">Genre</label>
+          <select id="genreInput" name="genre">
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Drama">Drama</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="yearInput">Year</label>
+          <input type="number" id="yearInput" name="year" min="1888" max="2100" required inputmode="numeric">
+        </div>
+
+        <p id="formError" class="form-error" role="alert" hidden></p>
+
+        <button type="submit" class="primary-button">Add to watchlist</button>
+      </form>
+    </section>
+
+    <section class="filters" aria-labelledby="filterHeading">
+      <h2 id="filterHeading">Filter movies</h2>
+
+      <div class="filter-group" role="group" aria-label="Filter by genre">
+        <button class="filter active" type="button" data-genre="All" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-genre="Action" aria-pressed="false">Action</button>
+        <button class="filter" type="button" data-genre="Comedy" aria-pressed="false">Comedy</button>
+        <button class="filter" type="button" data-genre="Sci-Fi" aria-pressed="false">Sci-Fi</button>
+        <button class="filter" type="button" data-genre="Drama" aria-pressed="false">Drama</button>
+      </div>
+
+      <div class="field search-field">
+        <label for="searchInput">Search by title</label>
+        <input type="search" id="searchInput" placeholder="e.g. Inception" autocomplete="off">
+      </div>
+    </section>
+
+    <section class="movies" aria-labelledby="moviesHeading">
+      <h2 id="moviesHeading">Your movies</h2>
+      <div id="movieList" class="movie-container"></div>
+      <p id="emptyMessage" class="empty-message" hidden>No movies match your filters yet.</p>
+    </section>
+
+    <section class="stats" aria-labelledby="statsHeading">
+      <h2 id="statsHeading">Your statistics</h2>
+      <p id="movieStats" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 CineList</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
